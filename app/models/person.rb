@@ -17,7 +17,7 @@ class Person < ActiveRecord::Base
   default_scope :order => :name 
   before_destroy :has_children?
 
-  attr_accessible :birth_date, :email, :father_name, :lattes_url, :mom_name, :name, :number_children,
+  attr_accessible :birth_date, :email, :father_name, :lattes_url, :mom_name, :name, :number_children, :cpf,
                   :city_id, :country_id, :state_id, :race_id, :education_degree_id, :marital_status_id, :blood_type_id, :gender_id, :person_type_ids,
                   :people_telephones_attributes, :person_address_attributes, :person_identification_doc_attributes
 
@@ -28,9 +28,11 @@ class Person < ActiveRecord::Base
   
   
   #Validações
-  validates :name, :birth_date, :mom_name, :gender_id, :education_degree_id, :presence => {:message => "deve ser informado."}
+  validates_uniqueness_of :cpf
+  validates :name, :cpf, :birth_date, :mom_name, :gender_id, :education_degree_id, :presence => {:message => "deve ser informado."}
   validates :city_id, :state_id, :race_id, :presence => {:message => "deve ser informado."}
   validates :number_children, :numericality => { :only_integer => true }
+  validate :validate_cpf
   #validates :email, :uniqueness => true
 
   def model_name_whitout_accents

@@ -21,7 +21,7 @@ pt-BR:
     attributes:
       person:
         name:  "Nome" 
-        name_complete:  "Nome completo" 
+        name_complete:  "Nome Completo *"
         birth_date:  "Nascimento" 
         father_name:  "Nome do Pai" 
         mom_name:  "Nome da Mãe" 
