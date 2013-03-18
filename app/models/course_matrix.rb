@@ -13,6 +13,9 @@ class CourseMatrix < ActiveRecord::Base
   
   validates :started_at, :class_season_type_id, :matrix_status_id, :matrix_evaluation_type_id,  :course_id, :presence => true
 
+  #validates :ended_at, :date => {:after => :started_at}
+  
+
   def model_custom_name
       self.id.to_s+' - Matriz ' + self.started_at.strftime('%d/%m/%Y') + ' - '+ self.course.try(:name)
   end  

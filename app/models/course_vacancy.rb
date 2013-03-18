@@ -4,3 +4,4 @@ class CourseVacancy < ActiveRecord::Base
   belongs_to :shift_type
   attr_accessible :number_vacancies, :course_id, :class_season_id, :shift_type_id
 end
+
