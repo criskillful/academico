@@ -5,3 +5,5 @@ jQuery ->
   $("#people_birth_date_div").datepicker
     language: "br"
     format: "dd.mm.yyyy"
+      
+  

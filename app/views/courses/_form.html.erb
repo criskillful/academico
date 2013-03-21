@@ -41,6 +41,16 @@
       <%= f.date_select :started_at, :class => 'date_select' %>
     </div>
   </div>
+  
+  
+  <!--
+   <div id="course_started_at_div" class="input-append date">
+                <%= f.label :started_at, :class => 'control-label' %>
+                <%= f.text_field :started_at, :style => "width:80px", :readonly =>"", :value => @course.started_at.blank? ? nil : @course.started_at.strftime("%d.%m.%Y") %><i class="icon-calendar add-on" title="Selecine a Data" ></i>
+              
+               <i class="add-on btn btn-mini" onclick="limparCampo('course_started_at')">Limpar</i>
+  </div>
+  -->
   <div class="control-group">
     <%= f.label :ended_at, :class => 'control-label' %>
     <div class="controls">

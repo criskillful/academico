@@ -39,6 +39,7 @@
                 <%= f.text_field :birth_date, :style => "width:80px", :readonly =>"", :value => @person.birth_date.blank? ? nil : @person.birth_date.strftime("%d.%m.%Y") %><i class="icon-calendar add-on" title="Selecine a Data" ></i>
               
                <i class="add-on btn btn-mini" onclick="limparCampo('people_birth_date')">Limpar</i>  
+          </div>     
                      
   	    <%= f.label :email, :class => 'control-label' %>    
 	    <%= f.text_field :email, :class => 'text_field' %>
